@@ -25,7 +25,7 @@ router.delete('/talks/:talk', function (req, res) {
     req.talk.remove();
     res.json(req.talk);
 });
-router.param('comment', function (req, res, next, id) {
+router.param('talk', function (req, res, next, id) {
     var query = Talk.findById(id);
     query.exec(function (err, talk) {
         if (err) { return next(err); }
