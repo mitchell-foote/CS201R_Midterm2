@@ -40,6 +40,8 @@ router.get('/talks/:talk', function (req, res) {
 });
 
 router.put('/talks/:talk/upvote', function (req, res, next) {
+    console.log("in put");
+    conosle.log(req.talk);
     req.talk.upvote(function (err, talk) {
         if (err) { return next(err); }
         res.json(talk);
