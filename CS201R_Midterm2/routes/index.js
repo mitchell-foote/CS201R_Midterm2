@@ -1,7 +1,7 @@
 ﻿var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Comment = mongoose.model('Talk');
+var Talk = mongoose.model('Talk');
 
 router.get('/talks', function (req, res, next) {
     Comment.find(function (err, comments) {
@@ -12,6 +12,7 @@ router.get('/talks', function (req, res, next) {
 
 router.post('/talks', function (req, res, next) {
     console.log("in post");
+    console.log(req.body);
     var comment = new Talk(req.body);
     console.log("talk made");
     comment.save(function (err, comment) {
