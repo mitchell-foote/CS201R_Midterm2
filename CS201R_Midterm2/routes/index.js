@@ -26,6 +26,7 @@ router.delete('/talks/:talk', function (req, res) {
     res.json(req.talk);
 });
 router.param('talk', function (req, res, next, id) {
+    console.log("in param");
     var query = Talk.findById(id);
     query.exec(function (err, talk) {
         if (err) { return next(err); }
