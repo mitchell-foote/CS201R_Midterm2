@@ -11,7 +11,9 @@ router.get('/talks', function (req, res, next) {
 });
 
 router.post('/talks', function (req, res, next) {
+    console.log("in post");
     var comment = new Talk(req.body);
+    console.log("talk made");
     comment.save(function (err, comment) {
         if (err) { return next(err); }
         res.json(comment);
