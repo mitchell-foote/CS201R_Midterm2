@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Talk = mongoose.model('Talk');
 
 router.get('/talks', function (req, res, next) {
-    Comment.find(function (err, comments) {
+    Talk.find(function (err, comments) {
         if (err) { return next(err); }
         res.json(comments);
     });
@@ -39,7 +39,7 @@ router.get('/talks/:talk', function (req, res) {
     res.json(req.talk);
 });
 
-router.put('/talk/:talk/upvote', function (req, res, next) {
+router.put('/talks/:talk/upvote', function (req, res, next) {
     req.talk.upvote(function (err, talk) {
         if (err) { return next(err); }
         res.json(talk);
