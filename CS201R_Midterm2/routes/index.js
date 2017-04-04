@@ -31,6 +31,7 @@ router.param('talk', function (req, res, next, id) {
     query.exec(function (err, talk) {
         if (err) { return next(err); }
         if (!talk) { return next(new Error("can't find talk")); }
+        console.log(talk);
         req.talk = talk;
         return next();
     });
