@@ -24,7 +24,7 @@
                 <button type="submit">Add Comment</button>
             </form>
            
-            <div ng-repeat="talk in talks | orderBy: '-upvotes'">
+            <div ng-repeat="talk in talks | orderBy: ['-upvotes','session']">
                 <span class="glyphicon glyphicon-remove" ng-click="delete(talk)"></span>
                 <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(talk)"></span>
                 {{talk.title}} - upvotes: {{talk.upvotes}}
