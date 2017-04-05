@@ -34,7 +34,7 @@
 
                             </div>
                             <div class="form-group">
-                                <label for="speaker"></label>
+                                <label for="speaker">Speaker</label>
                                 <input type="text" class="form-control" ng-model="speaker" placeholder="Speaker" />
 
                             </div>
@@ -51,7 +51,7 @@
                         <div class="row">
                             <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(talk)"></span>
                             {{talk.session}}
-                            <img src="{{talk.pictureUrl}}" style="width:5em" />
+                            <img src="{{talk.pictureUrl}}" style="width:3em" />
                             {{talk.speaker}} : {{talk.title}} - upvotes: {{talk.upvotes}}
                             <span class="glyphicon glyphicon-remove" ng-click="delete(talk)"></span>
 
