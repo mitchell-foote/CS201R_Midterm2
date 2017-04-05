@@ -38,6 +38,13 @@
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\index.html" />
+    <Content Include="public\stylesheets\bootstrap-theme.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.css.map" />
+    <Content Include="public\stylesheets\bootstrap-theme.min.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.min.css.map" />
+    <Content Include="public\stylesheets\bootstrap.css.map" />
+    <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\bootstrap.min.css.map" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="typings.json" />
